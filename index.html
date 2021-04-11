@@ -12,21 +12,68 @@
   <style>
     .attribution { font-size: 11px; text-align: center; }
     .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
+
+    .body {
+      background-image: url(/images/bg-pattern-bottom.svg);
+      background-size: 1000px;
+      background-color: hsl(185, 75%, 39%);
+    }
+    .card {
+  /* Add shadows to create the "card" effect */
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+  margin: auto;
+  width: 25%;
+  height: 35%;
+  padding: 10px;
+}
+
+/* On mouse-over, add a deeper shadow */
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+/* Add some padding inside the card container */
+.container {
+  padding: 2px 16px;
+}
+.column1 {
+  float: left;
+  width: 33.33%;
+}
+.column2 {
+  float: left;
+  width: 33.33%;
+}
+.column3 {
+  float: left;
+  width: 33.33%;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+    
+</style>
 </head>
-<body>
-  Victor Crest
-  26
-  London
-TEST
-  80K
-  Followers
-
-  803K
-  Likes
-
-  1.4K
-  Photos
+<body class="body">
+  <div class="card">
+    <img src="/images/image-victor.jpg" alt="Avatar" style="width:100%">
+      <div class="container">
+        <h4><b>Victor Crest <p>26</p></b></h4>
+        <p>London</p>
+        <hr>
+        <div class="row">
+          <div class="column1">80k Followers</div>
+          <div class="column2">803K Likes</div>
+          <div class="column3">1.4K Photos</div>
+        </div>
+      </div>
+    </div>
+  </div>
   <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
     Coded by <a href="#">Your Name Here</a>.
